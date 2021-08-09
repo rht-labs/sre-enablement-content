@@ -5,7 +5,7 @@
 - [ ] Add Tools if necessary
 
 ### 🐈 A Little Bit Backstory
-<insert a compant name here> Inc. is an entertaiment company that creates games to make people happy! With xx number of people...
+_Something something_ Inc. is an entertaiment company that creates games to make people happy! With xx number of people...
 A couple of developers from the company created this fun app for their friends and families: PetBattle. They hacked around with so that the authors can Cat versus Cat battle each other in a simple online forum. A My cat is better than your cat type of thing. There are very few bells and whistles to the initial architecture — there is a simple web-based user interface and an API layer coupled with a NoSQL database.
 
 One day, they realize that their app becomes a big hit! Nearly overnight, there was a drastically increased number of players, the PetBattle server crashes, and malicious pictures of not cats start appearing on the child-friendly application. 
