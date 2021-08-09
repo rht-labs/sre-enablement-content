@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>DevOps Culture & Practice</title>
+  <title>SRE Enablement</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Training material for the Red Hat Open Innovation Labs">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -16,19 +16,20 @@
   <script>
     window.$docsify = {
       name: 'SRE Enablement & Lab Exercises',
-      repo: 'https://github.com/rht-labs/enablement-docs',
+      repo: 'https://github.com/rht-labs/sre-enablement-docs',
       loadSidebar: true,
       alias: {
       '/.*/_sidebar.md': '/_sidebar.md'
       },
+      themeColor: '#CC0000',
       subMaxLevel: 5,
       auto2top: true,
       search: 'auto',
       notFoundPage: 'notThe404.md',
       copyCode: {
-        buttonText : 'Copy to clipboard',
-        errorText  : 'Error',
-        successText: 'Copied'
+        buttonText : '✂️',
+        errorText  : '😔',
+        successText: '💚 copied'
       }
     }
   </script>
@@ -42,6 +43,16 @@
   <script src="//unpkg.com/prismjs/components/prism-json.min.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/zoom-image.min.js"></script>
   <script src="https://unpkg.com/docsify-copy-code@2"></script>
-</body>
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 
+  <style>
+    p.tip {
+      border-left-color: #4D4D4D;
+    }
+    p.tip:before {
+      content: "!";
+      background-color: #4D4D4D;
+    }
+  </style>
+</body>
 </html>
