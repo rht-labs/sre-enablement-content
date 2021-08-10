@@ -2,6 +2,7 @@
 * [0. Let The Battles Begin](0-let-the-battles-begin/README.md)
 * [1. Ready for Production?](1-production-readiness-review/README.md)
 * [2. Pet Battle is on Prod!](2-pet-battle-on-prod/README.md)
+  * [🐱 PetBattle Instalation](2-pet-battle-on-prod/1-pet-battle-installation.md)
 * [3. Return of the Monitoring](3-return-of-the-monitoring/README.md)
 * [4. Toil Toil Toil](4-eliminate-toil/README.md)
 * [5. Oh no! Fire!!](5-incidents-oh-no/README.md)
