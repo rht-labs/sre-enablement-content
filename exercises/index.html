@@ -13,7 +13,8 @@
   <div id="app"></div>
   <script>
     window.$docsify = {
-        name: 'SRE Enablement & Lab Exercises',
+      auto2top: true,
+      name: 'SRE Enablement & Lab Exercises',
       repo: 'https://github.com/rht-labs/sre-enablement-content',
       loadSidebar: true,
       subMaxLevel: 0,
@@ -25,7 +26,7 @@
       copyCode: {
         buttonText : '✂️',
         errorText  : '😔',
-        successText: '💚 copied'
+        successText: 'copied 💚'
       }
     }
   </script>
@@ -33,6 +34,7 @@
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-yaml.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-groovy.min.js"></script>
@@ -54,6 +56,7 @@
       --base-font-size: 14px;
       --theme-color: #CC0000;
       --content-max-width: 75em;
+      --sidebar-width : 18rem;
     }
   </style>
 </body>
