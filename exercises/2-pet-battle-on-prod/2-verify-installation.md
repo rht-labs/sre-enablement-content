@@ -1,6 +1,6 @@
 
 ### Verify the Installation
-You just did the first installation on prod cluster manually so lets see if everything is fine. Open the application up in the browser to verify it's up and running. Here's a handy one-liner to get the address of the application:
+You just did the first installation on prod cluster (manually!) so lets see if everything is fine. Open the application up in the browser to verify it's up and running. Here's a handy one-liner to get the address of the application:
 
 ```bash
 oc get route/pet-battle -n ${TEAM_NAME}-prod --template='{{.spec.host}}'
@@ -51,9 +51,9 @@ fathom: false
 route: true
 # custom end point injected by config map. This is likely to changed
 config_map: '{
-  "catsUrl": "https://pet-battle-api-<strong>TEAM_NAME</strong>-prod.<strong>CLUSTER_DOMAIN</strong>",
+  "catsUrl": "https://pet-battle-api-<strong>${TEAM_NAME}</strong>-prod.<strong>${CLUSTER_DOMAIN}</strong>",
   "keycloak": {
-    "url": "https://keycloak-<strong>TEAM_NAME</strong>-prod.<strong>CLUSTER_DOMAIN</strong>/auth/",
+    "url": "https://keycloak-<strong>${TEAM_NAME}</strong>-prod.<strong>${CLUSTER_DOMAIN}</strong>/auth/",
     "realm": "pbrealm",
     "clientId": "pbclient",
     "redirectUri": "http://localhost:4200/tournament",
@@ -64,7 +64,7 @@ config_map: '{
 
 After you complete the updates, we need to deploy UI component to override the values:
 ```bash
-helm upgrade --install pet-battle-api petbattle/pet-battle-api --version=1.1.0 --namespace <YOUR_TEAM_NAME>-prod --create-namespace
+helm upgrade --install pet-battle-api petbattle/pet-battle-api --version=1.1.0 --namespace ${TEAM_NAME}-prod --create-namespace
 ```
 
 Congrats, you just addressed your first problem! (and also added something in your backlog - sorry! But this shouldn't be hardcoded, right? :))
