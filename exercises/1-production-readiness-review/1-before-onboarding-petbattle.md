@@ -1,23 +1,18 @@
-### Before Onboarding Pet Battle
-PetBattle has been running on 
+### Before Onboarding PetBattle
+In our scenario, PetBattle is already serving to the endusers. You can use PRR to identify the improvement points, do a prioritization with the product team and create a backlog.
 
 ### What do you need to create PRR?
-Well, not much :) This will be a checklist that you go through in order to confidently say "OK, this service is ready for live customer requests!" And as everything, this is a process which means it'll evolve over time. Start by deciding what 'readiness' mean for your organization. **A practice from OPL**
+Well, not much :) This is a checklist that you go through in order to confidently answer "is this service ready for live customer requests?". Start defining what sort of checkpoints make your team say "YES!" to this question. Create a table based on the check points and group them. Add some details to explain what do you expect from that check. And remember, as everything, this is also a process which means it'll evolve over time.
 
-In our scenario, PetBattle is already serving to the endusers. You can use this checklist to identify the improvement points, do a prioritization with the development team and create a backlog.
+**Maybe A practice from OPL ?**
 
-Generate the topics based on your readiness definition. When you agreed as a team, go through PetBattle and make a decision.
+Here is an example board to get you start.
+![example-prr-board](images/example-prr-board.jpg)
 
-Anything you can automate in this process? 
+It is important for this list to be available to all the whole organization so that other teams can also assess their services before requesting SRE support, or it would be just as useful for them to improve their services. Maybe you can help them to see a point that they haven't thought before. 
+Now go through your list to assess PetBattle and if any, decide what is next for your adventure.
+### Bonus: Can you automate this process? 
+Discuss within your team if there is any checks that you can automate and throw some ideas to investigate more for your backlog ??
 
-
-Not just PetBattle but maybe create a PRR for infrastructure??
-
-### Sample PRR
-Examples
-- https://github.com/mercari/production-readiness-checklist/blob/master/docs/references/pre-production-checklist.md
-- https://gruntwork.io/devops-checklist/
-
-| Section             | Topics                                                                                          |
-|---------------------|-------------------------------------------------------------------------------------------------|
-| General             | Description of a service, ownership declaration                                                 |
+### Bonus: Create a PRR for the infrastructure
+Is your platform production ready? It would also be useful to have a PRR for your platform that PetBattle is running on.

@@ -2,6 +2,7 @@
 * [0. Let The Battles Begin](0-let-the-battles-begin/README.md)
   * [🐌 The Basics](0-let-the-battles-begin/1-the-basics.md)
   * [🔦 The Backstory](0-let-the-battles-begin/2-the-backstory.md)
+  * [✨ Form the SRE Team](0-let-the-battles-begin/3-form-the-sre-team.md)
 * [1. Ready for Production?](1-production-readiness-review/README.md)
   * [📒 Before Onboarding](1-production-readiness-review/1-before-onboarding-petbattle.md)
 * [2. Pet Battle is on Prod!](2-pet-battle-on-prod/README.md)
