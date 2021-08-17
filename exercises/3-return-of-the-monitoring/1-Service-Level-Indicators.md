@@ -1,38 +1,19 @@
 ## SLIs
 Service Level Indicators, or SLIs, is about having meaningful measurements of your service in terms of your user's perspective. They are closely tied to what the users of the service care about, such as availability, latency, or response time.
 
+Let's start by defining the users of the service. Here is one example. Meet: Nynaeve Almeara
+
+<img src="3-return-of-the-monitoring/images/user-1.jpg" width="750">
+
+We will map a user journey based on the Nynaeve's interaction with the service. It helps us to understand her motivation and emotions while she is using the product. Ideally, user journeys help to investigate every side of the solution, and provide key pointers on how to design and improve a product or MVP. But in our case, it will help us to define what is good from the user point of view and map out the most important components for the given journey become successfull. These are essential to decide the most important SLIs. Having too many SLIs can cause distraction or unneccesary noise. When we have the best SLIs, we can identify the best place to collect data/metrics for the components and lastly, create a dashboard to display that to reflect our service quality.
+
+[TODO] finish this 😅😅
+
+<img src="3-return-of-the-monitoring/images/user-journey-map-1.jpg" width="900">
+
+[TODO] discuss maybe instead of given this, create a persona and a journey map for the training and let people to discuss PetBattle from scratch 🤔🤔🤔
+
 <!---replace this with OPL practices
-Let's start by defining that the users of the service care about then. Who should be join this session to define PetBattle's user base? 
-
-Personas:
-* people who want to add their cats to the competition 
-* people who want to vote for cats
-* people who just like to view some cats photo
-
-List some important user journeys for these personas:
-- Easily upload cat photos
-- ...
-
-Select one of them and define a happy path for this journey.
-
-What is "good" from the user point of view for this journey?
-- website is up and responding fast
-- photos uploaded super quick
-- can view the uploaded photo
-....
-
-Maps out the components for this journey:
-- Upload function is working 
-- DB has enough space and responds fast
-...
-
-Now we have enough information to define most important SLIs. Remember, having too many SLIs can be distracting and prevent focusing on what is important. 
-
-SLIs:
-- Requests that the UI responds to within 5 seconds.
-...
-
-Identify the best place to collect data/metrics and create a dashboard to display that to reflect their service quality.
 
 ### Now a bit hands on
 [TODO] research for drill down dashboard in Grafana
@@ -47,3 +28,4 @@ what could be a good incident for an enablement? loosing all slideS? :D
 Beta Runs - good example for testing?
 number of people, logistics etc - capacity planning
 Don’t just teach the tech, teach the culture.--->
+
