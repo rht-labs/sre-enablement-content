@@ -4,7 +4,7 @@ In our scenario, PetBattle is already serving to the endusers. You can use PRR t
 ### What do you need to create PRR?
 Well, not much :) This is a checklist that you go through in order to confidently answer "is this service ready for live customer requests?". Start defining what sort of checkpoints make your team say "YES!" to this question. Create a table based on the check points and group them. Add some details to explain what do you expect from that check. And remember, as everything, this is also a process which means it'll evolve over time.
 
-**Maybe A practice from OPL ?**
+*Maybe A practice from OPL ?*
 
 Here is an example board to get you start.
 ![example-prr-board](images/example-prr-board.jpg)

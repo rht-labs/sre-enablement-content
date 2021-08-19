@@ -1,3 +1,3 @@
 ### Introduce Tournament Feature
-Automated de
+Introduce automated deployments
 [TODO] Figure out the best place

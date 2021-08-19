@@ -1,6 +1,7 @@
 ## SLIs
 Service Level Indicators, or SLIs, is about having meaningful measurements of your service in terms of your user's perspective. They are closely tied to what the users of the service care about, such as availability, latency, or response time.
 
+#### Define Users
 Let's start by defining the users of the service. Here is one example. Meet: Nynaeve Almeara
 
 <img src="3-return-of-the-monitoring/images/user-1.jpg" width="750">

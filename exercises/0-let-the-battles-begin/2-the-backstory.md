@@ -12,13 +12,7 @@ The company had decided to own the app and develop a business around it. Develop
 [TODO] Explain how devs made changes in the architecture etc...
 ![pet-battle-architecture](images/pet-battle-architecture.png)
 
-_something something_ The app is now more secure and resilient!
+The app is now more secure and resilient!
 ![pet-battle](images/petbattle-ui.png)
 ### 😎 All the cool kids are playing Pet Battle!
 Buuuut since PetBattle became super hype, the development team started having hard times to keep up with the feature requests or bugs reports while maintaining the app on production. Incidents started to occur due to ? (high load, lack of high availability etc?) They needed to figure out things like security, scalability, operability, reliability to match with their customers and internal end users needs! (yes, there are other services depend on PetBattle now!)
-
-### 🌱 Newly formed SRE team!
-The company sees this as an opportunity to explore Site Reliability Engineering practices and decides to form a team to provide operational excellence to PetBattle.
-
-[TODO] explain the relationship between devs and SREs
-![sre-team-topologies](images/sre-team-topologies.png)
