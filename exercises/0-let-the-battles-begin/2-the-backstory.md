@@ -15,4 +15,4 @@ The company had decided to own the app and develop a business around it. Develop
 The app is now more secure and resilient!
 ![pet-battle](images/petbattle-ui.png)
 ### 😎 All the cool kids are playing Pet Battle!
-Buuuut since PetBattle became super hype, the development team started having hard times to keep up with the feature requests or bugs reports while maintaining the app on production. Incidents started to occur due to ? (high load, lack of high availability etc?) They needed to figure out things like security, scalability, operability, reliability to match with their customers and internal end users needs! (yes, there are other services depend on PetBattle now!)
+Buuuut since PetBattle became super hype, the development team started having hard times to keep up with the feature requests or bugs reports while maintaining the app on production. Incidents started to occur due to unexpected high load, lack of high availability or scalability. They needed to figure out things like security, scalability, operability, reliability to match with their external and internal end users needs! (yes, there are other services depend on PetBattle now!)

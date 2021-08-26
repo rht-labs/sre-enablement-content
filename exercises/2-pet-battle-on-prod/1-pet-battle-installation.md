@@ -2,6 +2,7 @@
 Now let's install PetBattle in our production cluster. The development team did a good job to create `Helm charts` for  PetBattle components.
 
 [TODO] a bit about helm
+[TODO] more details about components
 
 [TODO] make the outputs NICER
 

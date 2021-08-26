@@ -9,7 +9,9 @@ The company sees this as an opportunity to explore Site Reliability Engineering 
 ### 🦚 Forming a team
 Forming a new team is not an easy task. A team needs autonomy, psychological safety and visualization of work. And we have just the right practices for that! 
 * Another shout out to DO500 
-
-Mobius loop and summary of practices.. 
-
-After some times, maybe an Empathy Maps to define how SREs are seen by devs?
+* Team charter (or social contract) to define how team works 
+* Team API to define how team works/collaborate with the other teams
+* Team vision and scope, problem the team is trying to solve (prioritization) 
+* Mobius loop and summary of practices 
+* Reliability Backlog
+* After some times, maybe an Empathy Maps to define how SREs are seen by devs

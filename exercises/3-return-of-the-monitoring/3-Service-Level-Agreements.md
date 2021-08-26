@@ -1,4 +1,10 @@
 ## SLAs
-Exciting times for PetBattle! As the interest for the tournament service is growing fast
+Exciting times for PetBattle! As the interest for the PetBattle is growing fast, a network channel wants to create a game based on PetBattle!
 
-Another 
+### Introduce Tournament Feature
+Tournament feature is 
+
+
+
+Introduce automated deployments
+[TODO] Figure out the best place
