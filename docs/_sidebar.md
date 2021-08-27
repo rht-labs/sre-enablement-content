@@ -16,6 +16,8 @@
   * [💸 Service Level Agreements](3-return-of-the-monitoring/3-service-level-agreements.md)
   * [👛 Error Budgets](3-return-of-the-monitoring/4-error-budgets.md)
 * [4. Toil Toil Toil](4-eliminate-toil/README.md)
+  * [🦍 Define Toil](4-eliminate-toil/1-define-toil.md)
+  * [🎁 New version is Coming](4-eliminate-toil/2-new-version-coming.md)
 * [5. Oh no! Fire!!](5-incidents-oh-no/README.md)
   * [🎬 Structured Incident Management](5-incidents-oh-no/1-structured-incident-management.md)
   * [📗 Blameless Postmortems](5-incidents-oh-no/2-blameless-postmortems.md)
