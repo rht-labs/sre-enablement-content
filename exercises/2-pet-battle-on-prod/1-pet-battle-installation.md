@@ -1,10 +1,9 @@
 ### Installing PetBattle
+**TODO** a bit about helm and PetBattle components
+
+**TODO** make the outputs less black and white :(
+  
 Now let's install PetBattle in our production cluster. The development team did a good job to create `Helm charts` for  PetBattle components.
-
-[TODO] a bit about helm
-[TODO] more details about components
-
-[TODO] make the outputs NICER
 
 ```bash
 helm repo add petbattle https://petbattle.github.io/helm-charts

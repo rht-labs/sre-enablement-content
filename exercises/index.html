@@ -10,8 +10,48 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
 </head>
 <body>
+  <!-- <div class="team-name-form">
+      <div class="team-inputs">
+        <label for="tname">Team Name</label>
+        <input type="text" id="tname" name="teamname" placeholder="Your team name..">        
+      </div>
+
+      <div class="team-inputs">
+        <label for="cdomain">Cluster Domain</label>
+        <input type="text" id="cdomain" name="clusterdomain" placeholder="Your cluster domain..">
+      </div>
+
+      <div class="">
+        <button class="storage-btns" onclick="setNamesInStorage()">Save</button>
+        <button class="storage-btns" onclick="clearStorage()">Clear</button>
+      </div>
+  </div> -->
+
   <div id="app"></div>
+  
+  
   <script>
+    // document.getElementById("tname").value = localStorage.getItem('TEAM_NAME') ? localStorage.getItem('TEAM_NAME') : '';
+    // document.getElementById("cdomain").value = localStorage.getItem('CLUSTER_DOMAIN') ? localStorage.getItem('CLUSTER_DOMAIN') : '';
+
+    // function setNamesInStorage () {
+    //   let tname = document.getElementById('tname').value.toLowerCase();
+    //   let cdomain = document.getElementById('cdomain').value.toLowerCase();
+    //   console.info('INFO - setting team and cluster to :', tname, cdomain)
+    //   localStorage.setItem('TEAM_NAME', tname);
+    //   localStorage.setItem('CLUSTER_DOMAIN', cdomain);
+    //   location.reload();
+    // }
+
+    // function clearStorage () {
+    //   console.info('INFO - clearing team and cluster');
+    //   localStorage.removeItem('TEAM_NAME');
+    //   localStorage.removeItem('CLUSTER_DOMAIN');
+    //   document.getElementById('tname').value = '';
+    //   document.getElementById('cdomain').value = '';
+    //   location.reload();
+    // }
+
     window.$docsify = {
       auto2top: true,
       name: 'SRE Enablement & Lab Exercises',
@@ -27,21 +67,90 @@
         buttonText : '✂️',
         errorText  : '😔',
         successText: 'copied 💚'
-      }
+      },
+      plugins: [
+        function(hook) {
+          // hook.beforeEach(function(content) {
+          //   // Invoked each time before parsing the Markdown file.
+          //   const teamName = localStorage.getItem('TEAM_NAME') ? localStorage.getItem('TEAM_NAME') : '<TEAM_NAME>';
+          //   const clusterDomain = localStorage.getItem('CLUSTER_DOMAIN') ? localStorage.getItem('CLUSTER_DOMAIN') : '<CLUSTER_DOMAIN>';
+          //   return content.replaceAll('<TEAM_NAME>', teamName)
+          //           .replaceAll('<CLUSTER_DOMAIN>', clusterDomain);
+          // });
+
+          const footer = `<hr/>
+          <footer>
+          <span><a href="https://www.redhat.com/en/services/consulting/open-innovation-labs">🥼🧪Red Hat Open Innovation Labs</a> </span>
+          <span  style="float:right;><a href="https://www.redhat.com/en/services/training/do500-devops-culture-and-practice-enablement">🧑‍🏫 Site Reliability Engineering Enablement</a></span>
+          </footer>
+            `;
+          
+          hook.afterEach(function(html) {
+            return html + footer;
+          });
+        }
+      ],
+      search: 'auto', // default
+      vueComponents: { }
     }
+
+    
   </script>
+
   <!-- Docsify v4 -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script> -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
-  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>  
   <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-yaml.min.js"></script>
   <script src="//unpkg.com/prismjs/components/prism-groovy.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
-
   <style>
+    input[type=text] {
+      padding: 8px 12px;
+      /* display: inline-block; */
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    input[type=text]:focus {
+      outline: none !important;
+      border: 2px solid #F5606D;
+    }
+    /* .team-name-form {
+      margin-left: 0%;
+      background-color: #f3f3f3;
+      padding-left: 20%;
+      padding-right: 20%;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .team-inputs {
+      flex: 1;
+    }
+    .team-inputs:first-child {
+      /* margin-right: 30%; */
+    }
+    .team-inputs:input,label {
+      font-size: 12px;
+      display: block;
+    } */
+    .storage-btns {
+      font-size: 12px;
+      margin: 10px;
+      padding: 10px;
+      cursor: pointer;
+      background-color: #FAB6B6;
+      color: black;
+      border: 2px solid #FAB6B6; 
+      width: 130px; 
+      text-align: center;
+    }
     p.tip {
       border-left-color: #4D4D4D;
     }
@@ -57,6 +166,17 @@
       --theme-color: #CC0000;
       --content-max-width: 75em;
       --sidebar-width : 18rem;
+      --sidebar-nav-pagelink-background-image             : ;
+      --sidebar-nav-pagelink-background-image--active     : ;
+      --sidebar-nav-pagelink-background-image--collapse   : ;
+      --sidebar-nav-pagelink-background-image--loaded     : ;
+    }
+    img[alt=thumbnail] {
+      width:100px;
+      height:50px;
+      position: absolute;
+      right: 40px;
+      top: 40px;
     }
   </style>
 </body>

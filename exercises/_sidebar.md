@@ -19,5 +19,5 @@
 * [5. Oh no! Fire!!](5-incidents-oh-no/README.md)
   * [🎬 Structured Incident Management](5-incidents-oh-no/1-structured-incident-management.md)
   * [📗 Blameless Postmortems](5-incidents-oh-no/2-blameless-postmortems.md)
-* [6. A little Chaos Won't Hurt](6-chaos-wont-hurt/README.md)
+* [6. A little Chaos Won't Hurt?](6-chaos-wont-hurt/README.md)
 * [7. Step Up the Game](7-step-up-the-game/README.md)
