@@ -1,0 +1,18 @@
+release: "stage"
+source: "http://nexus:8081/repository/helm-charts/"
+##############
+# Argo Apps declaration
+#############
+applications:
+  # Keycloak
+  keycloak:
+    name: keycloak
+    enabled: true
+    source: https://github.com/petbattle/pet-battle-infra
+    source_ref: main
+    source_path: keycloak
+    values:
+      app_domain: apps.hivec.sandbox941.opentlc.com
+      ignoreHelmHooks: true
+
+  # Pet Battle Apps

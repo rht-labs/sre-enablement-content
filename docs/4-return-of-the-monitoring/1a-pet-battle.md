@@ -29,5 +29,7 @@ Let's map a user journey based on the Nynaeve's interaction with the service. It
 
 ### Create a Dashboard (Optional)
 
+#### Alerts on SLOs
 
-### Observe and Iterate
+
+#### Observe and Iterate
