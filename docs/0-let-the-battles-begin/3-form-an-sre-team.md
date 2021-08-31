@@ -1,3 +1,4 @@
+![thumbnail](../images/foundation.png)
 ## 🌱 Brand New SRE Team!
 The company sees this as an opportunity to explore Site Reliability Engineering practices and decides to form a team to provide operational excellence to PetBattle. But it is not just about managing apps in production. SRE practices and SRE mindset can (and will) help the company for future decisions and strategy, discover improvements for the overall system through learning from incidents, turn company into reliablity-aware by enabling others, and more.
 
@@ -5,17 +6,14 @@ The company sees this as an opportunity to explore Site Reliability Engineering 
 
 <img src="0-let-the-battles-begin/images/sre-team-topologies.png" width="500">
 
+### 🦚 Forming a new team
+Forming a new team is not an easy task. A team needs vision, autonomy, psychological safety and visualization of work. And we have just the right practices for that! These practices are not specific for SRE teams but they are helpful to build a good foundation and culture for Site Reliability Engineering mindset to thrive. And when you have a good foundation, you can scale on top of that.
 
-## 🦚 Forming a new team
-Forming a new team is not an easy task. A team needs autonomy, psychological safety and visualization of work. And we have just the right practices for that! These practices are not specific for SRE teams but they are helpful to build a good foundation and culture for  Site Reliability Engineering mindset to thrive.
-
-To learn more about Open Practices and Red Hat Open Innovation Labs; https://www.redhat.com/en/services/consulting/open-innovation-labs
-
-* Another shout out to DO500 
+To learn more about Open Practices and how Red Hat Open Innovation Labs make a use of them; https://www.redhat.com/en/services/consulting/open-innovation-labs
 
 ### Introduction to Mobius Loop
-
-### Social Contract / Team Charter
+[Mobius](https://www.mobiusloop.com) is a framework that connects discovery and delivery and can be used to connect strategy to products to operations. Mobius is used to understand, align, and share measurable target outcomes so they can be tested and validated. As Red Hat Open Innovation Labs, we make use a lot of this framework.
+### Social Contract
 - Details on [Social Contract](https://openpracticelibrary.com/practice/social-contract/) 
 - An example canvas or Miro board
 
@@ -31,7 +29,8 @@ To learn more about Open Practices and Red Hat Open Innovation Labs; https://www
 - Just Enough SRE
 
 ### Identify Metrics for Adoption
-- Introduce a space to put metrics ideas during the enablement. Like an adaption scale. (ie how many apps have SLOs identified)
+- How do you tell if it’s working well? Introduce a space to put metrics ideas during the enablement. Like an adaption scale. (ie how many apps have SLOs identified)
+> https://www.usenix.org/conference/srecon15/program/presentation/lueder
 ### Reliability Backlog
 - Introduce a backlog space. There will be stuff we need to think about, address or fix along the way.
 

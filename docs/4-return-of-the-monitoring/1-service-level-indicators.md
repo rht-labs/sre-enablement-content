@@ -1,8 +1,14 @@
 ## SLIs
 Service Level Indicators, or SLIs, is about having meaningful measurements of your service in terms of your user's perspective. They are closely tied to what the users of the service care about, such as availability, latency, or response time.
 
+[RED](https://grafana.com/files/grafanacon_eu_2018/Tom_Wilkie_GrafanaCon_EU_2018.pdf): Rate, Errors, Duration - introduced by [@tom_wilkie](https://twitter.com/tom_wilkie)
+
+[USE](http://www.brendangregg.com/usemethod.html): Utilization, Saturation, and Errors - introduced by [@brendangregg](https://twitter.com/brendangregg)
+
 
 [TODO] for facilitators; create a persona and a journey map for the enablement and let people to discuss PetBattle from scratch 🤔🤔🤔
+
+[TODO]  Play “what if” with a few scenarios, like unplanned outages of various durations, planned maintenance for a feature, and degraded service.
 
 <!---replace this with OPL practices
 

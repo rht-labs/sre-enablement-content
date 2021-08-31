@@ -27,9 +27,9 @@ config_map: '{
 
 After you complete the updates, we need to redeploy frontend to override the values:
 ```bash
-helm upgrade --install pet-battle-api \
-  --create-namespace --namespace ${TEAM_NAME}-prod \
-  petbattle/pet-battle-api --version=1.1.0
+helm upgrade --install pet-battle \
+  --namespace ${TEAM_NAME}-prod petbattle/pet-battle \
+  -f /tmp/values.yaml --version=1.0.6
 ```
 
 Congratulations 🥳🥳 You just addressed your first problem! (and also added something in your backlog - sorry! But this shouldn't stay as hardcoded, right? 🙃)
