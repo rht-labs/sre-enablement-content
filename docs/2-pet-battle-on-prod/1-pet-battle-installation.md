@@ -3,7 +3,7 @@
 
 **TODO** make the outputs less black and white :(
   
-Now let's install PetBattle in our production cluster. The development team did a good job to create `Helm charts` for  PetBattle components.
+Now let's install PetBattle into the cluster. The development team did a good job to create `Helm charts` for  PetBattle components. This will give us a good understanding of the application and its components.
 
 ```bash
 helm repo add petbattle https://petbattle.github.io/helm-charts

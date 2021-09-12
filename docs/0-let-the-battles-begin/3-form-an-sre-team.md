@@ -13,13 +13,15 @@ To learn more about Open Practices and how Red Hat Open Innovation Labs make a u
 
 ### Introduction to Mobius Loop
 [Mobius](https://www.mobiusloop.com) is a framework that connects discovery and delivery and can be used to connect strategy to products to operations. Mobius is used to understand, align, and share measurable target outcomes so they can be tested and validated. As Red Hat Open Innovation Labs, we make use a lot of this framework.
+
+<p class="tip">
+⛷️ <b>Facilitator Note</b> ⛷️ - Split into 3-4 people group and treat each group as a separate SRE team. Each team can have their own social contract or Team API etc.
+</p>
+
 ### Social Contract
 - Details on [Social Contract](https://openpracticelibrary.com/practice/social-contract/) 
 - An example canvas or Miro board
 
-### Team API
-- Details on [Team API](https://github.com/TeamTopologies/Team-API-template)
-- An example canvas or Miro board
 ### Team Vision & Scope
 - Introduce a space where people can put their ideas on the team's vision, who should be involved to this conversation and so on. (ie SMART framework)
 
@@ -28,9 +30,14 @@ To learn more about Open Practices and how Red Hat Open Innovation Labs make a u
 - Possible categories to tackle for the next 6 months
 - Just Enough SRE
 
+### Team API
+- Details on [Team API](https://github.com/TeamTopologies/Team-API-template)
+- An example canvas or Miro board
+
 ### Identify Metrics for Adoption
 - How do you tell if it’s working well? Introduce a space to put metrics ideas during the enablement. Like an adaption scale. (ie how many apps have SLOs identified)
 > https://www.usenix.org/conference/srecon15/program/presentation/lueder
+
 ### Reliability Backlog
 - Introduce a backlog space. There will be stuff we need to think about, address or fix along the way.
 

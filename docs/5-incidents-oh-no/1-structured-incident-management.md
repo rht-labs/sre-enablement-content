@@ -1,15 +1,19 @@
-## Incident Management
+## Pet Battle is getting alerts
+Through out this section, you will recieve several alerts (usually one by one). Before starting, define some example priority levels for your application (ie critical, major, minor...)
 
-### What is an incident?
-### Incident Response Process
-
-- Incident Commander (IC)
-
+Before we start, let's take a look at possible roles during an incident. 
+- Primary on-call
+- Incident Lead (IL)
 - Communications Lead (CL)
-
 - Operations Lead (OL)
+- Scribe
 
-The OL and CL report to the IC, no matter the normal reporting line.
+*The OL and CL report to the IC, no matter the normal reporting line.*
+### Example Incident Response Process
+0. On-call SRE gets the alert.
+1. Establish an Incident Lead (or Incident Commander).
+2. Inform 
+
 
 <!-----
 registry issue:

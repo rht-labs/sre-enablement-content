@@ -1,6 +1,6 @@
 ## Solution
 
-The development team has hardcoded some variable for pet-battle frontend and unfortunately documentation doesn't explicitly state that you need to change some values if you are moving PetBattle to another environment. We need to adjust the vars to suit our production environment. 
+The development team has hardcoded some variable for pet-battle frontend and unfortunately documentation doesn't explicitly state that you need to change some values if you are moving PetBattle to another environment. We need to adjust the variables to suit our production environment. 
 Let's get the values:
 ```bash
 wget https://raw.githubusercontent.com/rht-labs/pet-battle/main/chart/values.yaml
