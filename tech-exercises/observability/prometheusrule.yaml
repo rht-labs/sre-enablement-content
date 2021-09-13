@@ -1,0 +1,116 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  labels:
+    prometheus: petbattle
+    role: alert-rules
+  name: pet-battle-api-slos-prod
+  namespace: petbattle
+spec:
+  groups:
+  - name: pet-battle-api.slos-prod.rules
+    rules:
+    - expr: |
+        sum(rate(http_server_requests_seconds_count{namespace="petbattle",job="pet-battle-api",code=~"5.."}[1d]))
+        /
+        sum(rate(http_server_requests_seconds_count{namespace="petbattle",job="pet-battle-api"}[1d]))
+      labels:
+        job: pet-battle-api
+        namespace: petbattle
+      record: http_server_requests_seconds_count:burnrate1d
+    - expr: |
+        sum(rate(http_server_requests_seconds_count{namespace="petbattle",job="pet-battle-api",code=~"5.."}[1h]))
+        /
+        sum(rate(http_server_requests_seconds_count{namespace="petbattle",job="pet-battle-api"}[1h]))
+      labels:
+        job: pet-battle-api
+        namespace: petbattle
+      record: http_server_requests_seconds_count:burnrate1h
+    - expr: |
+        sum(rate(http_server_requests_seconds_count{namespace="petbattle",job="pet-battle-api",code=~"5.."}[2h]))
+        /
+        sum(rate(http_server_requests_seconds_count{namespace="petbattle",job="pet-battle-api"}[2h]))
+      labels:
+        job: pet-battle-api
+        namespace: petbattle
+      record: http_server_requests_seconds_count:burnrate2h
+    - expr: |
+        sum(rate(http_server_requests_seconds_count{namespace="petbattle",job="pet-battle-api",code=~"5.."}[30m]))
+        /
+        sum(rate(http_server_requests_seconds_count{namespace="petbattle",job="pet-battle-api"}[30m]))
+      labels:
+        job: pet-battle-api
+        namespace: petbattle
+      record: http_server_requests_seconds_count:burnrate30m
+    - expr: |
+        sum(rate(http_server_requests_seconds_count{namespace="petbattle",job="pet-battle-api",code=~"5.."}[3d]))
+        /
+        sum(rate(http_server_requests_seconds_count{namespace="petbattle",job="pet-battle-api"}[3d]))
+      labels:
+        job: pet-battle-api
+        namespace: petbattle
+      record: http_server_requests_seconds_count:burnrate3d
+    - expr: |
+        sum(rate(http_server_requests_seconds_count{namespace="petbattle",job="pet-battle-api",code=~"5.."}[5m]))
+        /
+        sum(rate(http_server_requests_seconds_count{namespace="petbattle",job="pet-battle-api"}[5m]))
+      labels:
+        job: pet-battle-api
+        namespace: petbattle
+      record: http_server_requests_seconds_count:burnrate5m
+    - expr: |
+        sum(rate(http_server_requests_seconds_count{namespace="petbattle",job="pet-battle-api",code=~"5.."}[6h]))
+        /
+        sum(rate(http_server_requests_seconds_count{namespace="petbattle",job="pet-battle-api"}[6h]))
+      labels:
+        job: pet-battle-api
+        namespace: petbattle
+      record: http_server_requests_seconds_count:burnrate6h
+    - alert: ErrorBudgetBurn
+      annotations:
+        message: 'High error budget burn for namespace=petbattle,job=pet-battle-api (current value: {{ $value }})'
+      expr: |
+        sum(http_server_requests_seconds_count:burnrate5m{namespace="petbattle",job="pet-battle-api"}) > (14.40 * (1-0.99900))
+        and
+        sum(http_server_requests_seconds_count:burnrate1h{namespace="petbattle",job="pet-battle-api"}) > (14.40 * (1-0.99900))
+      for: 2m
+      labels:
+        job: pet-battle-api
+        namespace: petbattle
+        severity: critical
+    - alert: ErrorBudgetBurn
+      annotations:
+        message: 'High error budget burn for namespace=petbattle,job=pet-battle-api (current value: {{ $value }})'
+      expr: |
+        sum(http_server_requests_seconds_count:burnrate30m{namespace="petbattle",job="pet-battle-api"}) > (6.00 * (1-0.99900))
+        and
+        sum(http_server_requests_seconds_count:burnrate6h{namespace="petbattle",job="pet-battle-api"}) > (6.00 * (1-0.99900))
+      for: 15m
+      labels:
+        job: pet-battle-api
+        namespace: petbattle
+        severity: critical
+    - alert: ErrorBudgetBurn
+      annotations:
+        message: 'High error budget burn for namespace=petbattle,job=pet-battle-api (current value: {{ $value }})'
+      expr: |
+        sum(http_server_requests_seconds_count:burnrate2h{namespace="petbattle",job="pet-battle-api"}) > (3.00 * (1-0.99900))
+        and
+        sum(http_server_requests_seconds_count:burnrate1d{namespace="petbattle",job="pet-battle-api"}) > (3.00 * (1-0.99900))
+      for: 1h
+      labels:
+        job: pet-battle-api
+        namespace: petbattle
+        severity: warning
+    - alert: ErrorBudgetBurn
+      annotations:
+        message: 'High error budget burn for namespace=petbattle,job=pet-battle-api (current value: {{ $value }})'
+      expr: |
+        sum(http_server_requests_seconds_count:burnrate6h{namespace="petbattle",job="pet-battle-api"}) > (1.00 * (1-0.99900))
+        and
+        sum(http_server_requests_seconds_count:burnrate3d{namespace="petbattle",job="pet-battle-api"}) > (1.00 * (1-0.99900))
+      for: 3h
+      labels:
+        job: pet-battle-api
+        namespace: petbattle
+        severity: warning

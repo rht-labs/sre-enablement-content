@@ -1,0 +1,29 @@
+alerts:
+- annotations: {}
+  expr: |
+    (
+      sum(rate(promhttp_metric_handler_requests_total{namespace="default",job="fooapp",code=~"5.."}[5m]))
+      /
+      sum(rate(promhttp_metric_handler_requests_total{namespace="default",job="fooapp"}[5m]))
+    )
+    > 0.050000
+  for: 5m
+  labels:
+    job: fooapp
+    namespace: default
+    severity: warning
+- annotations: {}
+  expr: |
+    (
+      sum(rate(promhttp_metric_handler_requests_total{namespace="default",job="fooapp",code=~"5.."}[5m]))
+      /
+      sum(rate(promhttp_metric_handler_requests_total{namespace="default",job="fooapp"}[5m]))
+    )
+    > 0.100000
+  for: 5m
+  labels:
+    job: fooapp
+    namespace: default
+    severity: critical
+grafana:
+  graph: '{"datasource": "$datasource", "legend": {"avg": false, "current": false, "max": false, "min": false, "show": true, "total": false, "values": false}, "seriesOverrides": [{"alias": "/2../", "color": "#56A64B"}, {"alias": "/3../", "color": "#F2CC0C"}, {"alias": "/4../", "color": "#3274D9"}, {"alias": "/5../", "color": "#E02F44"}], "targets": [{"expr": "promhttp_metric_handler_requests_total{{\"job\": \"fooapp\", \"namespace\": \"default\"}}", "format": "time_series", "intervalFactor": 2, "legendFormat": "{{code}}", "refId": "A", "step": 10}], "title": "HTTP Response Codes", "tooltip": {"shared": true, "sort": 0, "value_type": "individual"}, "type": "graph"}'

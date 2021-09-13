@@ -15,6 +15,8 @@
     * [♨️ SLIs for PetBattle](4-return-of-the-monitoring/1a-pet-battle.md)
     * [♨️ SLIs for Platform](4-return-of-the-monitoring/1b-platform.md)
   * [🎯 Service Level Objectives](4-return-of-the-monitoring/2-service-level-objectives.md)
+    * [🌀 SLOs for PetBattle](4-return-of-the-monitoring/2a-pet-battle.md)
+    * [🌀 SLOs for Platform](4-return-of-the-monitoring/2b-platform.md)
   * [💸 Service Level Agreements](4-return-of-the-monitoring/3-service-level-agreements.md)
   * [👛 Error Budgets](4-return-of-the-monitoring/4-error-budgets.md)
 * [5. Oh no! Fire!!](5-incidents-oh-no/README.md)

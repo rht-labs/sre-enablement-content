@@ -36,7 +36,7 @@ For the moment, API provides default spring boot metrics under `/metrics` endpoi
 
 Here is an example:
 ```bash
-http_server_requests_seconds_sum{method="GET",outcome="SUCCESS",status="200",uri="/cats/topcats",} 7.855780484
+http_server_requests_seconds_sum{method="GET",outcome="SUCCESS",status="200",uri="/cats/topcats"}: 7.855780484
 ```
 It is preferable to perform an exact match on the outcome tag (outcome="SERVER_ERROR"), instead of status code (like status !~"2..") Because by selecting “not 2xx”, you would be grouping server errors, like the common HTTP 500 Internal Server Error, with errors caused by the user, like HTTP 400 Bad Request or HTTP 403 Forbidden. A high rate of HTTP 400s may indicate that you recently released code that contained an accidental backward incompatibility in an API, or it could indicate that the user doesn't have the right payload. Alerts on client error ratio might be nice for intrusion detection, but the threshold would be much higher than server error ratio.<sup>[1](https://www.oreilly.com/library/view/sre-with-java/9781492073918/ch04.html)</sup>
 
