@@ -24,7 +24,7 @@ When we map the boundaries with the journey, we focus on the important measureme
 Now that we know what availability means for each component from user perspective at a high level, we can define SLIs based on that.
 
 For UI/API tier:
-- Request to open dashboard complete successfully (an event-based measurement)
+- Request to access PetBattle complete successfully (an event-based measurement)
 - Proportion of dashboard (home page) requests that were served in < 200ms (a time-based measurement)
 
 ### Determine Data Points

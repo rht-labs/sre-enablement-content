@@ -3,13 +3,13 @@ Let's take each SLI and set a realistic objective.
 
 ```yaml
 User Journey: Uploading Cat Photos 
-SLI Type: Latency 
-SLI Specification: Proportion of dashboard (home page) requests that were served in < 200ms
+SLI Type: Availability 
+SLI Specification: Request to access PetBattle complete successfully
 SLI Implementations:  
   - measured from the UI metrics.  
   - measured by probers that execute javascript in a browser.  
 SLO:
-  99% of home page requests in the past 28 days served in < 200ms.
+  99% of page requests in the past 28 days served are successfull  (ie status code is not 5xx).
 ```
 #### Alerts on SLOs
 *inspired by https://sre.google/workbook/alerting-on-slos/ and https://developers.soundcloud.com/blog/alerting-on-slos*
@@ -43,7 +43,7 @@ To create such rules, we will use some Jsonnet libraries. Take a look at `tech-e
         alertName: 'ErrorBudgetBurn',
         metric: 'http_server_requests_seconds_count',
         selectors: ['namespace="petbattle"', 'job="pet-battle-api"'],
-        target: 0.999,  // 99.9%
+        target: 0.99,  // 99%
 ```
 It creates alerts based on the SLI (`http_server_requests_seconds_count`) and SLO (`0.99`) we have chose. 
 
@@ -64,3 +64,7 @@ and to verify, let's call a faulty endpoint:
 echo https://pet-battle-api-${TEAM_NAME}.${CLUSTER_DOMAIN}/cats?failMe=500 | xargs -P 10 -n 1 curl
 ```
 
+After some time, you'll see an alert in OpenShift UI:
+
+
+![pb-error-budget-burn](images/pb-error-budget-burn.png)

@@ -32,7 +32,11 @@ helm upgrade --install pet-battle \
   -f /tmp/values.yaml --version=1.0.6
 ```
 
-Congratulations 🥳🥳 You just addressed your first problem! (and also added something in your backlog - sorry! But this shouldn't stay as hardcoded, right? 🙃)
+Congratulations 🥳🥳 You just addressed your first problem! (and also added something in your backlog - sorry! But this shouldn't stay as hardcoded, right? 🙃) This is a good example where SRE team can act like as enablers and help application team to create better templates for the application (either via PR or working together side-by-side)
+
+<p class="tip">
+⛷️ <b>Facilitator Note</b> ⛷️ - Based on this experience, what else would you add to your backlog? Think about the things that might have helped you during your troubleshooting.
+</p>
 
 Now that PetBattle is working fine, let's move to something more exciting practices!
 ![pet-battle-ui](images/pet-battle-ui.png)

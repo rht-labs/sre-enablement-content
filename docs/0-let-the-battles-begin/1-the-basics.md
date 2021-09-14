@@ -12,7 +12,6 @@
 2. In your IDE, open a new terminal by hitting `Terminal > Open Terminal in Specific Container > do500-stack` from the menu.
 ![new-terminal](./images/new-terminal.png)
 
-<!--@Cansu - this is how you style a colour on a word mid sentence <span style="color:purple;" >zsh</span>  -->
 3. <strong>OPTIONAL</strong> - if you want to use `zsh` as opposed to `sh`, you can set it as the default shell by running. `zsh` is swish and all the cool kids are using it 😎!
 ```bash
 echo "zsh" >> ~/.bashrc
@@ -40,8 +39,8 @@ echo ${TEAM_NAME}
 oc login --server=https://api.${SERVER_API}:6443 -u <USERNAME> -p <PASSWORD>
 ```
 
-8. Check your user permissions in OpenShift by creating your team's CICD project. 
+8. Check your user permissions in OpenShift by creating your team's first project. 
 ```bash
-oc new-project ${TEAM_NAME}-prod
+oc new-project ${TEAM_NAME}-project
 ```
 ![new-project](./images/new-project.png)

@@ -1,0 +1,121 @@
+pipeline {
+	agent {
+		label "master"
+	}
+  environment {
+		// GLobal Vars shared across all jenkins agents
+
+		// Job name contains the branch eg pet-battle-feature%2Fjenkins-123
+		// ensure the name is k8s compliant
+		// JOB_NAME = "${JOB_NAME}".replace("%2F", "-").replace("/", "-")
+		// NAME = "${JOB_NAME}".split("/")[0]
+		GIT_SSL_NO_VERIFY = true
+
+		// ArgoCD Config Repo
+		// set this as an ENV_VAR on Jenkins to make this easier?
+    // ARGOCD_CONFIG_REPO = "github.com/petbattle/ubiquitous-journey.git"
+        ARGOCD_CONFIG_REPO_PATH = "pet-battle/prod/values.yaml"
+		ARGOCD_CONFIG_REPO_BRANCH = "main"
+
+		// Credentials bound in OpenShift
+		GIT_CREDS = credentials("${OPENSHIFT_BUILD_NAMESPACE}-git-auth")
+		NEXUS_CREDS = credentials("${OPENSHIFT_BUILD_NAMESPACE}-nexus-password")
+
+		// Nexus Artifact repo 
+		NEXUS_REPO_NAME="labs-static"
+		NEXUS_REPO_HELM = "helm-charts"
+	}
+
+	// The options directive is for configuration that applies to the whole job.
+	options {
+		buildDiscarder(logRotator(numToKeepStr: '50', artifactNumToKeepStr: '1'))
+		timeout(time: 15, unit: 'MINUTES')
+		ansiColor('xterm')
+	}
+
+	stages {
+		stage('🗒️ Prepare Environment') {
+			failFast true
+            stage("📝 Release Build") {
+                options {
+                    skipDefaultCheckout(true)
+                }
+                agent { label "master" }
+                when {
+                    expression { GIT_BRANCH.startsWith("master") || GIT_BRANCH.startsWith("main") }
+                }
+                steps {
+                    script {
+                        // ensure the name is k8s compliant
+                        env.TEAM_NAME = "${GITLAB_GROUP_NAME}"
+                        env.NAME = "${JOB_NAME}".split("/")[0]
+                        env.APP_NAME = "${NAME}".replace("/", "-").toLowerCase()
+                        env.DESTINATION_NAMESPACE = "${TEAM_NAME}-prod"
+                        env.IMAGE_REPOSITORY = 'image-registry.openshift-image-registry.svc:5000'
+                        // env.ARGOCD_CONFIG_REPO = "${ARGOCD_CONFIG_REPO}"
+                        env.ARGOCD_CONFIG_REPO = "${GITLAB_HOST}/${GITLAB_GROUP_NAME}/sre-enablement.git"
+                    }
+        sh 'printenv'
+                }
+            }
+
+		}
+
+
+
+        stage("🏗️ Deploy - App") {
+        failFast true
+            stage("🧪 Prod Env - ArgoCD Git Commit") {
+                agent { label "jenkins-agent-argocd" }
+                when {
+                    expression { GIT_BRANCH.startsWith("master") || GIT_BRANCH.startsWith("main") }
+                }
+                steps {
+                    script {
+					    env.CHART_VERSION = sh(returnStdout: true, script: "yq eval .version chart/Chart.yaml").trim()
+				    }
+                    echo '### Commit new image tag to git ###'
+                    sh  '''
+                        git clone https://${GIT_CREDS}@${ARGOCD_CONFIG_REPO} config-repo
+                        cd config-repo
+                        git checkout ${ARGOCD_CONFIG_REPO_BRANCH} # master or main
+            
+                        PREVIOUS_VERSION=$(yq eval .applications.\\"${APP_NAME}\\".values.image_version "${ARGOCD_CONFIG_REPO_PATH}")
+                        PREVIOUS_CHART_VERSION=$(yq eval .applications.\\"${APP_NAME}\\".source_ref "${ARGOCD_CONFIG_REPO_PATH}")
+                        # patch ArgoCD App config with new app & chart version
+                        yq eval -i .applications.\\"${APP_NAME}\\".source_ref=\\"${CHART_VERSION}\\" "${ARGOCD_CONFIG_REPO_PATH}"
+                        yq eval -i .applications.\\"${APP_NAME}\\".values.image_version=\\"${VERSION}\\" "${ARGOCD_CONFIG_REPO_PATH}"
+                        yq eval -i .applications.\\"${APP_NAME}\\".values.image_namespace=\\"${IMAGE_NAMESPACE}\\" "${ARGOCD_CONFIG_REPO_PATH}"
+                        yq eval -i .applications.\\"${APP_NAME}\\".values.image_repository=\\"${IMAGE_REPOSITORY}\\" "${ARGOCD_CONFIG_REPO_PATH}"
+                        # Commit the changes :P
+                        git config --global user.email "jenkins@rht-labs.bot.com"
+                        git config --global user.name "Jenkins"
+                        git config --global push.default simple
+                        git add ${ARGOCD_CONFIG_REPO_PATH}
+                        git commit -m "🚀 AUTOMATED COMMIT - Deployment of ${APP_NAME} at version ${VERSION} 🚀" || rc=$?
+                        git remote set-url origin  https://${GIT_CREDS}@${ARGOCD_CONFIG_REPO}
+                        git push -u origin ${ARGOCD_CONFIG_REPO_BRANCH}
+                        # verify the deployment by checking the VERSION against PREVIOUS_VERSION
+                        until [ "$label" == "${VERSION}" ]; do
+                            echo "${APP_NAME}-${VERSION} version hasn't started to roll out"
+                            label=$(oc get dc/${APP_NAME} -o yaml -n ${DESTINATION_NAMESPACE}  | yq e '.metadata.labels["app.kubernetes.io/version"]' -)
+                            sleep 1
+                        done
+                        oc rollout status --timeout=2m dc/${APP_NAME} -n ${DESTINATION_NAMESPACE} || rc1=$?
+                        if [[ $rc1 != '' ]]; then
+                            yq eval -i .applications.\\"${APP_NAME}\\".source_ref=\\"${PREVIOUS_CHART_VERSION}\\" "${ARGOCD_CONFIG_REPO_PATH}"
+                            yq eval -i .applications.\\"${APP_NAME}\\".values.image_version=\\"${PREVIOUS_VERSION}\\" "${ARGOCD_CONFIG_REPO_PATH}"
+                            git add ${ARGOCD_CONFIG_REPO_PATH}
+                            git commit -m "😢🤦🏻‍♀️ AUTOMATED COMMIT - ${APP_NAME} deployment is reverted to version ${PREVIOUS_VERSION} 😢🤦🏻‍♀️" || rc2=$?
+                            git push -u origin ${ARGOCD_CONFIG_REPO_BRANCH}
+                            # TODO - check the roll back has not failed also...
+                            exit $rc1
+                        else
+                                echo "${APP_NAME} v${VERSION} deployment in ${DESTINATION_NAMESPACE} is successful 🎉 🍪"
+                        fi
+                    '''
+                }
+            }
+        }
+	}
+}

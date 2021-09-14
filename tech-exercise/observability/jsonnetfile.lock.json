@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "dependencies": [
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/grafana/grafonnet-lib.git",
+          "subdir": "grafonnet"
+        }
+      },
+      "version": "05fb200ee1a1816fc1b4c522071d5606d8dd71c1",
+      "sum": "mEoObbqbyVaXrHFEJSM2Nad31tOvadzIevWuyNHHBgI="
+    },
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/metalmatze/slo-libsonnet.git",
+          "subdir": ""
+        }
+      },
+      "version": "ba86443083e937760dbbc72d2e7ac626b202e2b4",
+      "sum": "DYdajKAq2+3015FY0AkB/vprbJ1WBz/tTLleGw1AJHo="
+    }
+  ],
+  "legacyImports": false
+}

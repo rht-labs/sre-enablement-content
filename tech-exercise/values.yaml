@@ -1,0 +1,27 @@
+# change source and team
+# source: https://github.com/rht-labs/tech-exercise.git
+source: https://gitlab-ce.<CLUSTER_DOMAIN>/<TEAM_NAME>/tech-exercise.git
+team: <TEAM_NAME>
+release: ci-cd
+
+applications:
+  # Tooling to support CI/CD
+  - name: ubiquitous-journey
+    enabled: false
+    source_path: "."
+    helm_values:
+      - ubiquitous-journey/values-tooling.yaml
+
+  # Prod app of app
+  - name: prod-app-of-pb
+    enabled: false
+    source_path: "."
+    helm_values:
+      - pet-battle/prod/values.yaml
+
+  # Stage App of Apps
+  - name: stage-app-of-pb
+    enabled: false
+    source_path: "."
+    helm_values:
+      - pet-battle/stage/values.yaml

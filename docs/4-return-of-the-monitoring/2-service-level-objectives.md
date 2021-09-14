@@ -19,3 +19,6 @@ SLO:
 
 - [Pet Battle SLOs](4-return-of-the-monitoring/2a-pet-battle.md)
 - [Platform SLOs](4-return-of-the-monitoring/2b-platform.md)
+
+Links we like:
+- https://promtools.dev/alerts/errors 
