@@ -11,7 +11,7 @@ But before - the tournament service introduces new components to the ecosystem. 
 Let's install tournament service. In your IDE, open up the `pet-battle/prod/values.yaml` file and copy the following:
 
 ```yaml
-  pet-battle-api:
+  pet-battle-tournament:
     name: pet-battle-tournament
     enabled: true
     source: https://petbattle.github.io/helm-charts  # http://nexus:8081/repository/helm-charts
