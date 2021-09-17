@@ -1,4 +1,3 @@
 # SRE Enablement Introduction
 
-![jenkins-crio-ocp-star-wars-kubes](./images/jenkins-crio-ocp-star-wars-kubes.png)
-[image-ref](https://www.cloudbees.com/blog/get-ripped-jenkins-docker-industrial-strength-continuous-delivery)
+![keep-calm-sre](./images/keep-calm-sre.png)
