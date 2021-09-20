@@ -49,13 +49,15 @@ It creates alerts based on the SLI (`http_server_requests_seconds_count`) and SL
 
 Following commands will create the prometheus rule at `prometheusrule.yaml` file.
 ```bash
+cd /projects/tech-exercise/observability/
 jb update
 jsonnet -J vendor/ prometheusrule.jsonnet | gojsontoyaml > prometheusrule.yaml
 ```
 
 Now let's apply the rules:
 ```bash
-oc apply -f /projects/tech-exercise/observability/prometheusrule.yaml -n ${TEAM_NAME}
+cd /projects/tech-exercise/observability/
+oc apply -f prometheusrule.yaml -n ${TEAM_NAME}
 ```
 
 and to verify, let's call a faulty endpoint:

@@ -11,7 +11,7 @@ API and tournamenet service log level is set to INFO and logs are already being 
 #### Sentry
 Adding Sentry SDK to your application to track errors and exceptions. 
 
-#### Tracing (service mesh?)
+#### Tracing (jaeger or full sevice mesh?)
 Trace a request across a distributed set of application components running in different containers on different nodes of a cluster is an important capability. 
 
 Tracing is provided as a part of OpenShift Service Mesh component. Service Mesh is already deployed in the cluster but Pet Battle is not a part of the mesh. We can enable ServiceMesh by adding `servicemesh: true` flag in our application config. Open up `tech-exercise/pet-battle/prod/values.yaml` file and add this value:

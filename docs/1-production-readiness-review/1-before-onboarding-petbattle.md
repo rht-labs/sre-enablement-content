@@ -1,6 +1,6 @@
 ![thumbnail](../images/discovery.png)
 ### Before Onboarding PetBattle
-PetBattle is already serving to the endusers but still, you can use PRR to identify the improvement points, do a prioritization with the product team and create a backlog.
+PetBattle is already serving to the endusers but still, you can use Production Readiness Review or `PRR` to identify the improvement points, do a prioritization with the product team and create a backlog.
 
 ### What do you need to create PRR?
 Well, not much :) This is a checklist that you go through in order to confidently answer "is this service ready for live customer requests?". Start defining what sort of checkpoints make your team say "YES!" to this question. Create a table based on the check points and group them. Add some details to explain what do you expect from that check. And remember, as everything, this is also a process which means it'll evolve over time.
