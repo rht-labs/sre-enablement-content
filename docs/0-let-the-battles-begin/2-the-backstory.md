@@ -10,11 +10,9 @@ One day, they realized that their app becomes a big hit! Nearly overnight, there
 
 The company had decided to own the app and develop a business around it. Developers of the app had started an exciting journey embracing [DevOps Culture and Practices](https://www.redhat.com/en/services/training/do500-devops-culture-and-practice-enablement). After a couple of months, they turned this simple hobbist application into a good business. 
 
-[TODO] Explain how devs made changes in the architecture etc...
-
 <img src="0-let-the-battles-begin/images/pet-battle-architecture.png" width="700">
 
-The app is now more secure and resilient!
+The app is now more secure and resilient now!
 
 ![pet-battle](images/petbattle-ui.png)
 ## All the cool kids are playing Pet Battle!

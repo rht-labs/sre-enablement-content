@@ -2,7 +2,7 @@
 Platform reliability as important as the applications' and even platform is not exposed to the external customers, we have internal customers! Application developers utilize the platform
 to deploy their applications, security and compliance departments consume platform for reporting and auditing, and all in all, PetBattle and other applications are running here :)
 
-Also, platform should be treated yet another product. Therefore you should be able to decide between "new features for the platform vs. reliability". And that requires to track the reliability of the platform.
+Also, platform should be treated yet another product. Therefore you should be able to have (better) conversations on reliability and have collaborative decisions among stakeholders. And that requires to track the reliability.
 
 Let's start by defining the users of the Platform. Here is one example. Meet: Elaine Trakand.
 

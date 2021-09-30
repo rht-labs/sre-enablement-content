@@ -5,6 +5,7 @@
   * [✨ Form an SRE Team](0-let-the-battles-begin/3-form-an-sre-team.md)
 * [1. Ready for Production?](1-production-readiness-review/README.md)
   * [📒 Before Onboarding](1-production-readiness-review/1-before-onboarding-petbattle.md)
+  * [🌕 Example Onboarding Questionnaire](1-production-readiness-review/2-example-questionnarie.md)
 * [2. Pet Battle is on Prod!](2-pet-battle-on-prod/README.md)
   * [🐱 PetBattle Instalation](2-pet-battle-on-prod/1-pet-battle-installation.md)
   * [🕵️‍♀️ Verify Installation](2-pet-battle-on-prod/2-verify-installation.md)

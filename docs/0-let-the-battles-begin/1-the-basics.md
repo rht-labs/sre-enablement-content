@@ -6,8 +6,10 @@
 1. Login to your CodeReadyWorkspace Editor. The link to this will be provided by your instructor.
 ![crw](./images/crw.png)
 
-  If the workspace has not been set up for you, you can create one from this devfile:
-    - https://raw.githubusercontent.com/rht-labs/enablement-framework/main/codereadyworkspaces/do500-devfile.yaml
+<p class="warn">
+If the workspace has not been set up for you, you can create one from this devfile. On Code Ready Workspaces, "Create Workspace > Custom Workspace". Enter this URL to load the DO500 stack:</br>
+<a href="https://raw.githubusercontent.com/rht-labs/enablement-framework/main/codereadyworkspaces/do500-devfile.yaml">https://raw.githubusercontent.com/rht-labs/enablement-framework/main/codereadyworkspaces/do500-devfile.yaml</a>
+</p>
 
 2. In your IDE, open a new terminal by hitting `Terminal > Open Terminal in Specific Container > do500-stack` from the menu.
 ![new-terminal](./images/new-terminal.png)
@@ -34,9 +36,9 @@ echo ${CLUSTER_DOMAIN}
 echo ${TEAM_NAME}
 ```
 
-7. Check if you can connect to OpenShift. The `<SERVER_API>` should be provided by your facilitator. Update it and run the command below. 
+7. Check if you can connect to OpenShift. Run the command below. 
 ```bash
-oc login --server=https://api.${SERVER_API}:6443 -u <USERNAME> -p <PASSWORD>
+oc login --server=https://api.${CLUSTER_DOMAIN##apps.}:6443 -u <USERNAME> -p <PASSWORD>
 ```
 
 8. Check your user permissions in OpenShift by creating your team's first project. 

@@ -1,5 +1,5 @@
 ![thumbnail](../images/discovery.png)
-### Before Onboarding PetBattle
+## Before Onboarding PetBattle
 PetBattle is already serving to the endusers but still, you can use Production Readiness Review or `PRR` to identify the improvement points, do a prioritization with the product team and create a backlog.
 
 ### What do you need to create PRR?

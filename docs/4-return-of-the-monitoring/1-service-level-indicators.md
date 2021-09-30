@@ -11,3 +11,10 @@ As this needs to be defined from enduser's point of view, let's run some user ba
 
 - [Pet Battle SLIs](4-return-of-the-monitoring/1a-pet-battle.md)
 - [Platform SLIs](4-return-of-the-monitoring/1b-platform.md)
+
+<!----
+Goodhart's Law
+Moore's Law
+
+ability to align stakeholder vs the speed of improvement for metrics collection and computation 
+--->
