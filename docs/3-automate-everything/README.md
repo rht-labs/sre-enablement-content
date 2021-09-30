@@ -1,5 +1,5 @@
 # 😺 Pet Battle is on Prod
-> 
+> something something for atuomation
 ## 👨‍🍳 Exercise Intro
 In this exercise, we will set up our working environment. We will automate the installation of toolings we need, as well as the deployment of PetBattle. And while doing this, we will utilize GitOps approach.
 
