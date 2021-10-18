@@ -2,8 +2,6 @@
 # Product Readiness Review
 > An approach to asses the application if it is ready for Production from design and operability point of view.
 Contionus testing is already in place to get the early feedback about code and integration with the other services but there are still some non-functional areas that you should to check.
-
-You can use this as a 'onboarding questionnarie for production' as well. 
 ## 👨‍🍳 Exercise Intro
 In this exercise, we will create a checklist/questionnarie to assess Pet Battle and the platform.
 

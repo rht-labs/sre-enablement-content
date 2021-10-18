@@ -2,17 +2,18 @@
 ## 🌱 Brand New SRE Team!
 The company sees this as an opportunity to explore Site Reliability Engineering practices and decides to form a team to provide operational excellence to PetBattle and underlying platform. But it is not just about managing apps in production. SRE practices and SRE mindset can (and will) help the company for future decisions and strategy, discover improvements for the overall system through learning from incidents, turn company into reliablity-aware by enabling others, and more. 
 
-The company's vision for this team is that they will act like an enablement team 
+The company's vision for this team is that they will act like an enablement team and scale the learnings throughout the company.
 
 [TODO] explain [Team Topologies](https://teamtopologies.com/) approach, the relationship between devs and SREs..
 
 <img src="0-let-the-battles-begin/images/sre-team-topologies.png" width="500">
+
 _Diagram credit: [Team Topologies](https://teamtopologies.com/)_
 
 ### 🦚 Forming a new team
-Forming a new team is not an easy task. A team needs vision, autonomy, psychological safety and visualization of work. And we have just the right practices for that! These practices are not specific for SRE teams but they are helpful to build a good foundation and culture for Site Reliability Engineering mindset to thrive. And when you have a good foundation, you can scale on top of that.
+Forming a new team is not an easy task. A team needs vision, autonomy, psychological safety and visualization of work. And we have just the right practices for that! These practices are not specific for SRE, but they are helpful to build a good foundation and culture for Site Reliability Engineering mindset to thrive. And when you have a good foundation, you can scale on top of that.
 
-To learn more about [Open Practices](https://openpracticelibrary.com/) and how Red Hat Open Innovation Labs make a use of them; https://www.redhat.com/en/services/consulting/open-innovation-labs
+To learn more about [Open Practices](https://openpracticelibrary.com/) and how Red Hat Open Innovation Labs make a use of them, please visit https://www.redhat.com/en/services/consulting/open-innovation-labs
 
 ### Introduction to Mobius Loop
 [Mobius](https://www.mobiusloop.com) is a framework that connects discovery and delivery and can be used to connect strategy to products to operations. Mobius is used to understand, align, and share measurable target outcomes so they can be tested and validated. As Red Hat Open Innovation Labs, we make use a lot of this framework.
