@@ -44,11 +44,11 @@ helm upgrade --install pet-battle \
 ```
 <img src="2-pet-battle-on-prod/images/helm-install-ui.png" width="750">
 
+Note: Tournament add `--set pet-battle-infra.install_cert_util=true` if cert utils is not installed in your cluster at cluster-scope.
 ```bash
 helm upgrade --install pet-battle-tournament \
-  --set pet-battle-infra.install_cert_util=true \
   --timeout=10m \
-  --namespace ${TEAM_NAME}-prod petbattle/pet-battle-tournament --version=1.0.40 \
+  --namespace ${TEAM_NAME}-prod petbattle/pet-battle-tournament --version=1.0.40
 ```
 <img src="2-pet-battle-on-prod/images/helm-install-infra.png" width="750">
 
