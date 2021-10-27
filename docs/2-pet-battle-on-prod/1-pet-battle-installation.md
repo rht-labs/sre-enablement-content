@@ -25,7 +25,7 @@ helm upgrade --install pet-battle \
 
 ```bash
 helm upgrade --install pet-battle-tournament \
-  --timeout=10m \
+  --timeout=15m \
   --set pet-battle-infra.install_cert_util=true \
   --namespace ${TEAM_NAME}-prod petbattle/pet-battle-tournament --version=1.0.40
 ```
