@@ -3,13 +3,16 @@
 PetBattle is already serving to the endusers but still, you can use Production Readiness Review or `PRR` to identify the improvement points, do a prioritization with the product team and create a backlog.
 
 ### What do you need to create PRR?
-Well, not much :) This is a checklist that you go through in order to confidently answer "is this service ready for live customer requests?". Start defining what sort of checkpoints make your team say "YES!" to this question. Create a table based on the check points and group them. Add some details to explain what do you expect from that check. And remember, as everything, this is also a process which means it'll evolve over time.
+Well, not much :) This is a checklist that you go through in order to confidently answer "is this service ready for live customer requests?". Start defining what sort of checkpoints make your team say "YES!" to this question. Create a table based on the check points and group them. Add some details to explain what do you expect from that check. And remember, as everything, this is also a process which means it'll evolve over time, and each PostMortem you carry out may potentially add new points to `PRR`. Nothing stops you from doing a number of PRRs across the lifespan of Application, and the PRR is the single best place to ask all of the difficult questions SRE may have about the Application. Remember one right question asked now may turn out to be one less call in the middle of the night later on.
+
+PRO-TIP:
+Start with PRR as early as possible, even if the Application is still in design phase, PRR the design itself. It's a brilliant knowledge sharing opportunity for both DEVs and SREs, and it allows all parties to look at Application from entirely different angles. On top of that, earlier you jointly discover potential reliability issues, easier it is to fix them.
 
 Here is an example board to get you start.
 ![example-prr-board](images/example-prr-board.jpg)
 
 
-It is important for this list to be available to the whole organization so that other teams can also assess their services before requesting SRE support, or it would be just as useful for them to improve their services. Maybe you can help them to see a point that they haven't thought before. 
+It is important for this list to be available to the whole organization so that other teams can also assess their services before requesting SRE support, or it would be just as useful for them to improve their services. Maybe you can help them to see a point that they haven't thought before.
 Now go through your list to assess PetBattle and if any, decide what is next for your adventure.
 
 <p class="tip">
@@ -23,6 +26,5 @@ Is your platform production ready? It would also be useful to have a PRR for you
 ⛷️ <b>Facilitator Note</b> ⛷️ - The organization might have a separate platform engineering team along side the SRE team. Platform engineering vs SRE team could be a good discussion.
 </p>
 
-### Bonus: Can you automate this process? 
+### Bonus: Can you automate this process?
 Discuss within your team if there is any checks that you can automate and throw some ideas to investigate more for your reliability backlog.
-
