@@ -68,12 +68,13 @@ Backup policies and recovery plan if data is lost or degraded. Actual test of BC
 - Required capacity in terms of memory and cpu per pod, and the number of pods. Is this expected to change over time?
 - Required amount of storage (DB, S3, local, etc). Is this expected to change over time?
 - Simplified requirements for capacity exists (ex. for each 100K TPS Application needs additional replica of component ABC)
+- Required capacity in terms of additional services like logging and monitoring
 
 ### 14. Internal Dependencies
-List internal services your application depends on. List SLA for those services. What's the course of action and impact if they fail?
+List internal services your application depends on. List SLA for those services. What's the course of action and impact if they fail? List contact points and escalation matrixes.
 
 ### 15. External Dependencies
-List external services your application depends on. List SLA for those services. What's the course of action and impact if they fail?
+List external services your application depends on. List SLA for those services. What's the course of action and impact if they fail? List contact points and escalation matrixes.
 
 ### 16. Application Requirements in OpenShift
 List of OpenShift features this application relies on, and whether it has some deployment constraints like special affinity/anti-affinity rules or namespace co-location with other services.
@@ -90,6 +91,7 @@ List of OpenShift features this application relies on, and whether it has some d
 - ...but if you must enable DEBUG in production, can you do that fast?
 - Retain logs for a period of 14-30 days.
 - Retaining logs forever can create a liability if they have secret or confidential data due to a bug in code.
+- Does the platfom have enough capacity to process logs at volume forecasted by Application
 **Metrics**
 - Service Level Indicators (SLI) - applications must export metrics for all SLIs. If applicable, processing flow entry-points and exit-points  should expose metrics for all SLIs as well.
 **Alertmanager Rules**
@@ -97,7 +99,9 @@ List of OpenShift features this application relies on, and whether it has some d
 
 ### 20. Testing
 **Load/Overload/Stability/Reliability/Robustness/Observability Testing**
-- What kind of load testing has been done on the application?
+- What kind of load testing has been done on the application? What's the peak traffic application can handle on reference infrastructure?
+- What's the application behaviour when it gets overloaded?
+- What kind of failures in general were seen in testing?
 
 ### 21. Communication
 All dev teams must take following actions:
