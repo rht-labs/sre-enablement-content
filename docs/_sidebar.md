@@ -7,7 +7,7 @@
   * [📒 Before Onboarding](1-production-readiness-review/1-before-onboarding-petbattle.md)
   * [🌕 Example Onboarding Questionnaire](1-production-readiness-review/2-example-questionnarie.md)
 * [2. Pet Battle is on Prod!](2-pet-battle-on-prod/README.md)
-  * [🐱 PetBattle Instalation](2-pet-battle-on-prod/1-pet-battle-installation.md)
+  * [🐱 PetBattle Installation](2-pet-battle-on-prod/1-pet-battle-installation.md)
   * [🕵️‍♀️ Verify Installation](2-pet-battle-on-prod/2-verify-installation.md)
 * [3. Automate Everything?](3-automate-everything/README.md)
   * [😺 Automation](3-automate-everything/1-automation.md)
