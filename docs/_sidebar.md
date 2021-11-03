@@ -27,4 +27,5 @@
   * [🦍 Define Toil](6-eliminate-toil/1-define-toil.md)
   * [🎁 New version is Coming](6-eliminate-toil/2-new-version-coming.md)
 * [7. A little Chaos Won't Hurt?](7-chaos-wont-hurt/README.md)
+  * [🐌 Chaos Testing](7-chaos-wont-hurt/1-failure-testing.md)
 * [8. Step Up the Game](7-step-up-the-game/README.md)
