@@ -27,5 +27,7 @@
   * [🦍 Define Toil](6-eliminate-toil/1-define-toil.md)
   * [🎁 New version is Coming](6-eliminate-toil/2-new-version-coming.md)
 * [7. A little Chaos Won't Hurt?](7-chaos-wont-hurt/README.md)
-  * [🐌 Chaos Testing](7-chaos-wont-hurt/1-failure-testing.md)
+  * [🐌 Chaos Tooling](7-chaos-wont-hurt/1-install-chaos-mesh.md)
+  * [💫 Chaos Testing - Pods](7-chaos-wont-hurt/2-failure-testing-pod-fault.md)
+  * [💫 Chaos Testing - Network](7-chaos-wont-hurt/3-failure-testing-network-fault.md)
 * [8. Step Up the Game](7-step-up-the-game/README.md)

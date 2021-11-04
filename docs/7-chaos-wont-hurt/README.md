@@ -1,5 +1,7 @@
 # A Little Chaos Won't Hurt
 
+**TODO** a bit about Chaos Engineering
+
 # Background
 > An approach to ...
 ## 👨‍🍳 Exercise Intro
