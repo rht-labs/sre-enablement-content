@@ -16,7 +16,7 @@ Let's setup and run a Network chaos test scenario that simulates network packet 
     kind: Schedule
     apiVersion: chaos-mesh.org/v1alpha1
     metadata:
-      name: mongo-drop
+      name: <TEAM_NAME>-mongo-drop
       namespace: <TEAM_NAME>-test
       annotations:
         experiment.chaos-mesh.org/pause: 'false'
