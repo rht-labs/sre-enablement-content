@@ -6,7 +6,7 @@
 
 Performing any sort of testing reliably requires the use of solid tooling support for you platform - in our case, OpenShift/Kubernetes. In this exercise we try out one of the [CNCF incubating projects](https://chaos-mesh.org) - **Chaos Mesh**. It is an open source cloud-native Chaos Engineering platform built for Kubernetes.
 
-Chaos Mesh offers various types of fault simulation and has an enormous capability to orchestrate fault scenarios. We can simulate various abnormalities that might occur in reality during the development, testing, and production environments and find potential problems in the system.
+Chaos Mesh offers various types of fault simulation and offers  ability to orchestrate fault scenarios. We can simulate various abnormalities that might occur in reality during the development, testing, and production environments and find potential problems in the system.
 
 Chaos Mesh provides a convenient Web UI interface which helps us learn the basic concepts and monitor the status of our Chaos experiments.
 
