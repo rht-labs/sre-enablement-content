@@ -98,14 +98,15 @@ Let's setup and run a Network chaos test scenario that simulates network packet 
     backlog 0b 0p requeues 0
     </code></pre></div>
 
-6. 🪄Discuss in your teams - 🪄
+6. 🪄Discuss in your teams. Deploy some more experiments if you have time !! - 🪄
 
-    - are there any modifications to the architecture you would make based on the network testing?
-    - if using partial packet loss, do you see any degrading application performance? (hint: tcp retries)
-    - if you set 100% loss continuously - how does the pod health checks affect the outcome?
-    - how we could automate running the chaos mesh YAML test suite using tools like ArgoCD / Tekton or Jenkins Pipelines?
+    - What mitigations are already deployed in pet battle / OpenShift to alleviate the two failure experiments (pods and networking)? 
+    - Are there any modifications to the architecture you would make based on the network testing?
+    - If testing using partial packet loss (e.g. 10%), do you see any degrading application performance? If not, why not? (hint: tcp retries)
+    - If you set 100% loss continuously - how does the pod health checks affect the outcome of the experiment?
+    - How we could automate running the chaos mesh YAML test suite using tools like ArgoCD / Tekton or Jenkins Pipelines?
 
-### 🚢 Much Much More to explore !
+### 🚢 Much Much More to explore!
 
 Chaos mesh has many more types of [tests to explore](https://chaos-mesh.org/docs/) including:
 
@@ -115,4 +116,4 @@ Chaos mesh has many more types of [tests to explore](https://chaos-mesh.org/docs
 - Node failures
 - Time faults
 
-It also has a concept of _Workflows_. When you use Chaos Mesh to simulate real system faults, continuous validation is always a need. You might want to build a series of faults on the Chaos Mesh platform, instead of performing individual Chaos injections. Read about how to do this [here.](https://chaos-mesh.org/docs/create-chaos-mesh-workflow/)
+Chaos Mesh also has a concept of _Workflows_. When you use Chaos Mesh to simulate real system faults, continuous validation is always a need. You might want to build a series of faults on the Chaos Mesh platform, instead of performing individual Chaos injections. Read about how to do this [here.](https://chaos-mesh.org/docs/create-chaos-mesh-workflow/)

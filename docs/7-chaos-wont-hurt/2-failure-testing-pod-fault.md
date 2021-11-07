@@ -70,3 +70,5 @@ You can read more about [single experiments here](https://chaos-mesh.org/docs/de
     ![images/chaos-pb-schedule-3.png](images/chaos-pb-schedule-3.png)
 
 🪄OBSERVE EXPERIMENT RUNNING :D - A random pet battle api pod will be killed every 3 minutes. Observe if the pet battle application still works OK during disruption. 🪄
+
+- How did you test disruption of pet battle ?
