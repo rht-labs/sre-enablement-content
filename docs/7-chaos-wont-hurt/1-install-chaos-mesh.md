@@ -1,6 +1,4 @@
-## Failure testing aka Chaos Engineering
-
-### Install Chaos Mesh
+## Install Chaos Mesh
 
 **We could likely move this step into the cluster setup**
 
