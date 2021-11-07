@@ -1,4 +1,4 @@
-## Chaos Failure Testing
+## Chaos Failure Testing - Pods
 
 > In teams, run some chaos tests on your applications, check their responses and mitigate any failures found.
 
