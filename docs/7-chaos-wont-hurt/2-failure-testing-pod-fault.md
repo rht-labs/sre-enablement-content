@@ -53,7 +53,7 @@ You can read more about [single experiments here](https://chaos-mesh.org/docs/de
     pet-battle-api-56d595fd85-sphpd   1/1     Terminating         0          26m
     </code></pre></div>
 
-6. You can `Archive` this experiment, then re-create it if you to run it again.
+6. You can `Archive` this experiment, then re-create it if you want to run it again.
 
 ### Schedule The Experiment
 
