@@ -103,7 +103,7 @@ Let's setup and run a Network chaos test scenario that simulates network packet 
     - What mitigations are already deployed in pet battle / OpenShift to alleviate the two failure experiments (pods and networking)? 
     - Are there any modifications to the architecture you would make based on the network testing?
     - If testing using partial packet loss (e.g. 10%), do you see any degrading application performance? If not, why not? (hint: tcp retries)
-    - If you set 100% loss continuously - how does the pod health checks affect the outcome of the experiment?
+    - If you set 100% network loss continuously - how does the pod health checks affect the outcome of the experiment?
     - How we could automate running the chaos mesh YAML test suite using tools like ArgoCD / Tekton or Jenkins Pipelines?
 
 ### 🚢 Much Much More to explore!
