@@ -1,7 +1,6 @@
 # Return of the Monitoring
 > PetBattle already have some basic monitoring based on platform and application metrics. (and you probably have these details through your PRR.) But now that the PetBattle is on production, what else would you monitor?  
 
-[TODO] Intro to observability
 Observability is ability to measure the status of your Application based only on what Application and supporting infrastructure presents. It's also used as an umbrella term for various telemetry sources that combined together answer (or at least should answer) the ultimate question: "What my Application is doing and how well is it doing the thing, whatever that is?"
 
 Depending on the place, telemetry can be provided by monitoring, logging and tracing utilities, with boundaries between all three becoming more and more blurred.   
